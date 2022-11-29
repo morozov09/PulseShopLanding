@@ -35,6 +35,8 @@
     min-height: 650px;
     padding: 21px 0 93px 0;
     background: url(/src/img/bg_header.png) center no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .header{
@@ -52,7 +54,6 @@
 }
 
 .header .header__official {
-    font-family: 'MuseoModerno';
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
