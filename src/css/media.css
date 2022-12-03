@@ -1,4 +1,12 @@
+@media only screen and (max-width: 950px){
+    .consultation {
+        padding-left: 30px;
+    }
+}
 @media only screen and (max-width: 768px) {
+    .consultation {
+        padding-left: 0;
+    }
     .promo__wrapper .promo__header {
         font-size: 34px;
     }
@@ -103,6 +111,25 @@
         margin-top: 0px;
         text-align: center;
         padding-left: 0rem;
+    }
+    .consultation .consultation__descr {
+        font-size: 25px;
+        text-align: center;
+        line-height: 50px;
+    }
+    .consultation .consultation__subdescr{
+        text-align: center;
+        font-size: 16px;
+    }
+    .feed-form {
+        align-items: center;
+        width: 100%;
+    }
+    .feed-form input{
+        width: 300px;
+    }
+    .submit {
+        width: 300px;
     }
 }
 
