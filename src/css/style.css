@@ -359,6 +359,7 @@
     left: -66px;
     border: none;
     background-color: #fff;
+    background: none;
 }
 
 .carousel .slick-prev, .slick-next img {
