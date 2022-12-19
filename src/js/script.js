@@ -38,5 +38,26 @@ $(document).ready(function(){
             $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
             $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
         })
-      })
+      });
+
+        // Modal window
+// активация модальных окон 
+  $('[data-modal=consultation]').on('click', function() {
+    $('.overlay, #consultation').fadeIn();
+  });
+  // скрипт для закрытия модального окна
+  $('.modal__close').on('click', function() {
+    $('.overlay, #consultation, #thanks, #order').fadeOut();
+  });
+  // заказ, вывод окна с заказом (order) на нажатие 'Купить'
+  $('.button_mini').on('click', function(){ 
+    $('.overlay, #order').fadeIn();
+  });
+
+//   $('.button_mini').each(function(i) { 
+//     $(this).on('click', function(){
+//       $('#order, .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+//       $('.overlay, #order').fadeIn();
+//     })
+//   });
 });
