@@ -17,7 +17,8 @@ $(document).ready(function(){
             }
         ]
       });
-
+         
+      // Табы
       $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
         $(this)
           .addClass('active').siblings().removeClass('catalog__tab_active')
@@ -60,4 +61,24 @@ $(document).ready(function(){
 //       $('.overlay, #order').fadeIn();
 //     })
 //   });
+
+// <!-- подключение maskedinput для ввода номера телефона -->
+$('input[name=phone]').mask("+7 (999) 999-99-99");
+
+// отправка форм не забываем обновлять файлы в локалхост и сбрасывать кэш в браузере SHIFT + F5
+$('form').submit(function(e) {
+  e.preventDefault();
+  $.ajax({
+    type: "POST",
+    url: "mailer/smart.php",
+    data: $(this).serialize()
+  }).done(function() {
+    $(this).find("input").val("");
+    $('#consultation, #order').fadeOut();
+    $('.overlay, #thanks').fadeIn();
+
+    $('form').trigger('reset');
+  });
+  return false;
+ });
 });
