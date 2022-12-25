@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="/src/scss/style.css">
     <link rel="stylesheet" href="/src/css/media.css">
     <link rel="stylesheet" href="/src/css/slick.css">
+    <link rel="stylesheet" href="/src/css/animate.min.css">
 </head>
 <body>
-    <div class="promo">
+    <div id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -77,7 +78,7 @@
                                                     соревнованиям по триатлону!</div>
                     </div>
                     <div class="advantages_item">
-                    <img class="advantages_rem2" src="/src/icons/heart.png" alt="heart">
+                    <img class="advantages_rem2 advantages_rem2_animated" src="/src/icons/heart.png" alt="heart">
                     <span class="advantages_text2">Заботимся о здоровье</span>
                     <div class="advantages_desc2">Мы работаем для того, <br>
                                                 чтобы Ваши занятия спортом шли на <br>
@@ -118,7 +119,7 @@
 
 
 <!-- слайдер -->
-<section class="carousel">
+<div class="carousel">
     <div class="container">
         <div class="carousel_inner"> 
             <div> <img src="/src/img/Слайд №1.png" alt="slide"></div>
@@ -126,7 +127,7 @@
             <div> <img src="/src/img/Слайд №3.png" alt="slide"> </div>
         </div>
     </div>
-</section>
+</div>
 
 <!-- ТАБЫ -->
 <section class="catalog">
@@ -138,10 +139,10 @@
             <li class="catalog__tab"><div>для триатлона</div></li>
         </ul>
         <div class="catalog__content catalog__content_active">
-            <div class="catalog-item">
+            <div class="catalog-item wow" >
                 <div class="catalog-item__wrapper">
                     <div class="catalog-item__content catalog-item__content_active">
-                        <img src="/src/img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
+                        <img src="/src/img/pulsometr.png" alt="pulsometr" class="catalog-item__img" >
                         <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
                         <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                         <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
@@ -300,11 +301,11 @@
 
 <section class="feedback">
     <div class="container">
-        <div class="feedback__reviews">
+        <div class="feedback__reviews fadeInUp animate">
 
             <div class="feedback__review">отзывы клиентов</div>
             
-            <div class="feedback_review1">
+            <div class="feedback_review1  wow animate__animated animate__fadeInUp">
             <img src="/src/icons/photo_1.jpg" alt="" class="feedback__img">
             <p class="feedback__name">Ирина Иванченко</p>
             <p class="feedback__runs">2 полумарафона</p>
@@ -314,14 +315,14 @@
                 Спасибо, RunSmart! </p>
             </div> <!-- feedback__review -->
 
-            <div class="feedback_review2">
+            <div class="feedback_review2  wow animate__animated animate__fadeInUp">
                 <img src="/src/icons/photo_2.jpg" alt="" class="feedback__img">
                 <p class="feedback__name">Иван Сёмочкин</p>
                 <p class="feedback__runs">1 полумарафон</p>
                 <p class="feedback__descr">Крутая штука-пульсометр. Обычно без них бегал. Оказывается только хуже себе делал. <br> Купил пульсометр, ещё в подарок получил тренировку. Со мной вместе провели первую тренировку, научили пользоваться новым гаджетом. Также объяснили основы анатомии, составили план тренировок на месяц вперёд. <br> <br> С ними подготовился к своему первому полумарафону! Спасибо!!!
                 </div> <!-- feedback__review -->
 
-                <div class="feedback_review3">
+                <div class="feedback_review3 wow animate__animated animate__fadeInUp">
                     <img src="/src/icons/photo_3.jpg" alt="" class="feedback__img">
                     <p class="feedback__name">Юлия Дашкина</p>
                     <p class="feedback__runs">2 полумарафона</p>
@@ -383,18 +384,23 @@
         <div class="modal__subtitle">Спасибо за вашу заявку</div>
         <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
     </div>
-
-
 </div>
 
+<!-- кнопка для возврата наверх --> 
+<a href="#up" class="pageup">
+    <img src="/src/icons/up-arrow.png" alt="pageup" class="pageup__img">
+</a>
 
 
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> <!-- *надо для masked form телефона -->
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script> <!-- *надо для masked form телефона -->
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="/src/js/slick.min.js"></script> <!-- слайдер  -->
  <!-- подключение maskedinput для ввода номера телефона -->
 <script src="/src/js/jquery.maskedinput.min.js"></script>
- <!-- подключение maskedinput для ввода номера телефона -->
+<!-- wow js for open script when u scroll -->
+<script src="/src/js/wow.min.js"></script>
 <script src="/src/js/script.js"></script>
 </body>
 </html>

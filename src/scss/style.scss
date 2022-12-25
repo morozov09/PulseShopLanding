@@ -193,13 +193,22 @@
 }
 
 .advantages .advantages_rem1 {
-    padding-left: 5rem;
+    display: block;
+    margin: 0 auto;
+    // padding-left: 5rem;
 }
 .advantages .advantages_rem2 {
-    padding-left: 5rem;
+    display: block;
+    margin: 0 auto;
+    // padding-left: 5rem;
+    &_animated {
+        animation: heartbeat 1.5s infinite;
+    }
 }
 .advantages .advantages_rem3 {
-    padding-left: 5rem;
+    display: block;
+    margin: 0 auto;
+    // padding-left: 5rem;
 }
 
 .advantages .advantages_main .advantages_desc1{
@@ -334,7 +343,7 @@
     margin: 0 auto;
     position: relative;
 }
-
+// slider 
 .carousel .slick-prev, .slick-next {
     position: absolute;
     top: 50%;
@@ -714,6 +723,32 @@
 
 #consultation, #order, #thanks {
     display: none;
+}
+
+// <!-- кнопка для возврата наверх --> 
+.pageup {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    img {
+        width: 100%;
+    }
+}
+
+// анимация сердечка 
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
 

@@ -62,7 +62,7 @@ $(document).ready(function(){
 //     })
 //   });
 
-// <!-- подключение maskedinput для ввода номера телефона -->
+// <!-- подключение maskedinput для ввода номера телефона --> + file = "jquery masked input form"
 $('input[name=phone]').mask("+7 (999) 999-99-99");
 
 // отправка форм не забываем обновлять файлы в локалхост и сбрасывать кэш в браузере SHIFT + F5
@@ -81,4 +81,25 @@ $('form').submit(function(e) {
   });
   return false;
  });
+
+// скрипт появление кнопки при определенном скролле вниз ТАК ЖЕ ДЛЯ РАБОТЫ СКРИПТОВ НЕОБХОДИМ document.on.ready
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 1600) {
+    $('.pageup').fadeIn();
+  } else {
+    $('.pageup').fadeOut();
+  }
+   
+});
+
+
+// скрипт плавное поднятие навверх ТАК ЖЕ ДЛЯ РАБОТЫ СКРИПТОВ НЕОБХОДИМ document.on.ready это штука в начале)
+
+ /* тут класс */ $('.pageup').on('click', function(e){
+  $('html,body').stop().animate({ scrollTop: /* тут айди к которому надо вернуться */ $('#up').offset().top }, 1000);
+  e.preventDefault();
+});
+
+// скрипт для появления анимация, только когда долистываешь до определённого участка
+ new WOW().init();
 });
